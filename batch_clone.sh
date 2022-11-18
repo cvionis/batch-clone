@@ -14,9 +14,9 @@ echo "Clone $# repositories into the current working directory? (Y/n)"
 while :
 do
     read CONFIRM
-    if [ "$CONFIRM" = "Y" ]; then
+    if [ "$CONFIRM" = "Y" ] || [ "$CONFIRM" = "y" ]; then
         break
-    elif [ "$CONFIRM" = "N" ]; then
+    elif [ "$CONFIRM" = "N" ] || [ "$CONFIRM" = "n" ]; then
         exit 0
     else
         echo "Choose a valid input (Y/n)"
