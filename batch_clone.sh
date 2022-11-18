@@ -6,8 +6,22 @@
 if [ "$1" = "" ]
 then
     echo Usage: Enter the urls to clone into the current directory, separated by a single space
+    exit 1
 fi
 
+echo "Clone $# repositories into the current working directory? (Y/n)"
+
+while :
+do
+    read CONFIRM
+    if [ "$CONFIRM" = "Y" ]; then
+        break
+    elif [ "$CONFIRM" = "N" ]; then
+        exit 0
+    else
+        echo "Choose a valid input (Y/n)"
+    fi
+done
 
 for i in $@
 do 
