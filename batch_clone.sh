@@ -5,7 +5,7 @@
 
 if [ "$1" = "" ]
 then
-    echo Usage: Enter the urls to clone into the current directory, separated by a single space
+    echo Usage: Enter the urls to clone into the current directory, each separated by a single space
     exit 1
 fi
 
