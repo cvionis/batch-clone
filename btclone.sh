@@ -1,7 +1,7 @@
 #/usr/bin/sh
 
 # A simple shell script allowing the user to pass the urls 
-# of several remote repositories as arguments and clone them into the current working directory
+# of several remote repositories as arguments and clone them all into the current working directory
 
 if [ "$1" = "" ]
 then
