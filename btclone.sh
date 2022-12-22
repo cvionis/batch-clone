@@ -1,4 +1,4 @@
-#/usr/bin/sh
+#!/bin/sh
 
 # A simple shell script allowing the user to pass the urls 
 # of several remote repositories as arguments and clone them into the current working directory
