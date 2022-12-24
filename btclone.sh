@@ -1,10 +1,10 @@
 #!/bin/sh
 
-# A simple shell script allowing the user to pass the urls 
-# of several remote repositories as arguments and clone them into the current working directory
+# A shell script allowing the user to pass the urls of one or more remote 
+# git repositories as arguments and clone them into the current working directory
 if [ "$1" = "" ]
 then
-    echo "Usage: Enter the urls to clone into the current directory, each separated by a single space"
+    echo "Usage: btclone repo1 repo2 ..."
     exit 1
 fi
 
@@ -12,10 +12,10 @@ echo "Clone $# repositories into the current working directory? (Y/n)"
 
 while :
 do
-    read CONFIRM
-    if [ "$CONFIRM" = "Y" ] || [ "$CONFIRM" = "y" ]; then
+    read input
+    if [ "$input" = "Y" ] || [ "$input" = "y" ]; then
         break
-    elif [ "$CONFIRM" = "N" ] || [ "$CONFIRM" = "n" ]; then
+    elif [ "$input" = "N" ] || [ "$input" = "n" ]; then
         exit 0
     else
         echo "Choose a valid input (Y/n)"
