@@ -26,3 +26,4 @@ for i in $@
 do 
     git clone $i
 done
+
